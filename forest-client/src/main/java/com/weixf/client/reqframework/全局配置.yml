@@ -1,0 +1,33 @@
+# 设置全局后端框架
+# 目前版本有两种选择：okhttp3 和 httpclient
+# 不填的默认请求为 okhttp3
+
+forest:
+  backend: httpclient # 设置全局后端为 httpclient
+
+# 设置全局后端框架
+# 目前版本有两种选择：okhttp3 和 httpclient
+# 不填的默认请求为 okhttp3
+
+forest:
+  backend: okhttp3 # 设置全局后端为 okhttp3
+
+
+# java类配置
+
+#  // 目前版本有两种选择：okhttp3 和 httpclient
+# // 不填的默认请求为 okhttp3
+#
+# // 获取全局默认配置对象
+# ForestConfiguration configuration = Forest.config();
+# // 设置全局后端为 httpclient
+# configuration.setBackend(new HttpclientBackend());
+
+#  // 目前版本有两种选择：okhttp3 和 httpclient
+#  // 不填的默认请求为 okhttp3
+#
+#  // 获取Forest全局配置对象
+#  ForestConfiguration configuration = Forest.config();
+#  // 设置全局后端框架为 okhttp3
+#  configuration.setBackend(new OkHttp3Backend());
+
