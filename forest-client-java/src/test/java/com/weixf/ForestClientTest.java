@@ -26,10 +26,8 @@ public class ForestClientTest {
     @Test
     public void test1() {
         ForestConfiguration configuration = Forest.config();
-
         // 配置后端 HTTP API
         configuration.setBackendName("httpclient");
-
         // 连接池最大连接数，默认值为500
         configuration.setMaxConnections(123);
         // 每个路由的最大连接数，默认值为500
@@ -54,7 +52,7 @@ public class ForestClientTest {
         configuration.setLogEnabled(true);
         // [自v1.5.27版本起可用] 异步模式（默认为 platform）
         configuration.setAsyncMode(ForestAsyncMode.PLATFORM);
-
+        // 添加全局变量
         configuration.setVariableValue("username", "foo");
         configuration.setVariableValue("userpwd", "bar");
 
