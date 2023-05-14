@@ -2,6 +2,8 @@ package com.weixf.client.reqbody;
 
 import com.dtflys.forest.annotation.Body;
 import com.dtflys.forest.annotation.Post;
+import com.dtflys.forest.http.ForestRequest;
+import com.dtflys.forest.http.ForestResponse;
 import com.weixf.entity.UserInfo;
 
 /*
@@ -10,6 +12,14 @@ import com.weixf.entity.UserInfo;
  * @date 2023-05-05
  */
 public interface MyFormClient {
+
+    /**
+     * 默认body格式为 application/x-www-form-urlencoded，即以表单形式序列化数据
+     */
+    @Post("http://localhost:8080/user")
+    String sendPost(@Body("username") String username,  @Body("password") String password);
+
+
 
     /*
     @Body 注解的例子用的是普通的表单格式，也就是contentType属性为application/x-www-form-urlencoded的格式，即contentType不做配置时的默认值。
