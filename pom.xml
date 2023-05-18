@@ -11,6 +11,7 @@
         <module>forest-client</module>
         <module>forest-server</module>
         <module>forest-client-java</module>
+        <module>forest-example</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -36,6 +37,12 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-test</artifactId>
+                <version>2.5.14</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-configuration-processor</artifactId>
                 <version>2.5.14</version>
             </dependency>
 
