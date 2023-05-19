@@ -11,8 +11,6 @@ import javax.annotation.Resource;
 @Slf4j
 @SpringBootTest
 public class ForestClientAppTest {
-
-
     @Resource
     private MyClient myClient;
 
@@ -21,5 +19,4 @@ public class ForestClientAppTest {
         String s = myClient.helloGet();
         log.info("请求接口返回结果：" + s);
     }
-
 }
