@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:forest="http://forest.dtflyx.com/schema/forest"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://forest.dtflyx.com/schema/forest
+       http://forest.dtflyx.com/schema/forest/forest-spring.xsd">
+    <forest:configuration id="configuration" maxConnections="500" connectTimeout="10000" readTimeout="3000">
+        <forest:scan configuration="configuration" base-package="com.yoursite.client"/>
+    </forest:configuration>
+</beans>
+
