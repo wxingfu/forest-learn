@@ -22,5 +22,4 @@ public interface MyBodyAnnoClient {
     String sendPost(@Body("username") String username, @Body("password") String password);
 
 
-
 }

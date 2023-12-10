@@ -68,6 +68,7 @@ public interface MyBodyTypeClient {
      * JSON 编码器快捷注解
      * 如果要指定特定JSON转换器为某一请求的Encoder，可以使用对应 JSON 编码器的快捷注解
      */
+
     /**
      * 指定 Fastjson 为 Encoder
      */
@@ -134,7 +135,6 @@ public interface MyBodyTypeClient {
             decoder = ForestJacksonConverter.class
     )
     Map getData();
-
 
 
 }

@@ -1,7 +1,6 @@
 package com.weixf.client.template;
 
 import com.dtflys.forest.annotation.Get;
-import com.dtflys.forest.annotation.Request;
 import com.dtflys.forest.annotation.Var;
 
 public interface MyTemplateClient2 {
@@ -32,7 +31,6 @@ public interface MyTemplateClient2 {
      * // 也就是只会有 a、x、y、b 四个Query参数
      * myClient.getData("1&x=10&y=20", "hello");
      */
-
 
 
 }

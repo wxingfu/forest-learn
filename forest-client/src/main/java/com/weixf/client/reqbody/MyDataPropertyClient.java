@@ -31,6 +31,7 @@ public interface MyDataPropertyClient {
     /*
      * 在data属性中进行数据绑定
      */
+
     /**
      * 这里 data 属性中设置的字符串内容会绑定到请求体中
      * 其中 ${0} 和 ${1} 为参数序号绑定，会将序号对应的参数绑定到字符串中对应的位置
@@ -76,7 +77,7 @@ public interface MyDataPropertyClient {
 
 
     /**
-     *  XML 数据加入到请求体中，其中header设置为Content-Type: application/xml
+     * XML 数据加入到请求体中，其中header设置为Content-Type: application/xml
      */
     @Request(
             url = "http://localhost:8080/hello/user",
@@ -94,7 +95,6 @@ public interface MyDataPropertyClient {
      * BODY:
      *     <misc><username>foo</username><password>bar</password></misc>
      */
-
 
 
 }

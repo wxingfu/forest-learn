@@ -115,6 +115,10 @@ public class Location {
         return tel;
     }
 
+    public void setTel(String tel) {
+        this.tel = tel;
+    }
+
     public String getAdcode() {
         return adcode;
     }
@@ -137,10 +141,6 @@ public class Location {
 
     public void setCity(String city) {
         this.city = city;
-    }
-
-    public void setTel(String tel) {
-        this.tel = tel;
     }
 
     public String getCityadcode() {

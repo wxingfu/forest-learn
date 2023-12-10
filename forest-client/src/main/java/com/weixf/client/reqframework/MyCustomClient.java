@@ -38,7 +38,8 @@ public interface MyCustomClient {
      * 接口的缓存开关设定如下:
      */
     @Get("/")
-    @BackendClient(cache = false) // 关闭后端 Client 缓存
+    @BackendClient(cache = false)
+    // 关闭后端 Client 缓存
     ForestRequest<String> sendData();
 
 }

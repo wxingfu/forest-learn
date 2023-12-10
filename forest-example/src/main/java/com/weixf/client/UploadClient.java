@@ -1,6 +1,11 @@
 package com.weixf.client;
 
-import com.dtflys.forest.annotation.*;
+import com.dtflys.forest.annotation.BaseRequest;
+import com.dtflys.forest.annotation.Body;
+import com.dtflys.forest.annotation.DataFile;
+import com.dtflys.forest.annotation.Post;
+import com.dtflys.forest.annotation.PostRequest;
+import com.dtflys.forest.annotation.Request;
 import com.dtflys.forest.callback.OnProgress;
 import org.springframework.core.io.Resource;
 import org.springframework.web.multipart.MultipartFile;

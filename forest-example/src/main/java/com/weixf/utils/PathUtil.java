@@ -9,7 +9,7 @@ public class PathUtil {
         for (int i = 0; i < addPaths.length; i++) {
             String temp = addPaths[i].startsWith(separator) ? addPaths[i] : separator + addPaths[i];
             if (result.toString().endsWith(separator)) {
-                //含头不含尾
+                // 含头不含尾
                 result.delete(result.length() - separator.length(), result.length());
             }
             result.append(temp);

@@ -16,7 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.*;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -42,7 +46,7 @@ public class TestUploadController {
         return "hello";
     }
 
-    //处理文件上传的方法
+    // 处理文件上传的方法
     @PostMapping("/upload")
     public Map upload(MultipartFile file, HttpServletRequest request) throws IOException {
         String webPath = "upload";
@@ -56,7 +60,7 @@ public class TestUploadController {
         return result;
     }
 
-    //处理文件上传的方法
+    // 处理文件上传的方法
     @PostMapping("/upload2")
     public Map upload2(MultipartFile file, @RequestParam("username") String username, HttpServletRequest request) throws IOException {
         String webPath = "upload";
@@ -71,7 +75,7 @@ public class TestUploadController {
         return result;
     }
 
-    //处理文件上传的方法
+    // 处理文件上传的方法
     @PostMapping("/upload-array")
     public Map uploadList(MultipartFile[] files, HttpServletRequest request) throws IOException {
         String webPath = "upload";

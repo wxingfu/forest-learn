@@ -51,6 +51,4 @@ public interface MyBinaryClient {
     String sendInputStream(@Body InputStream inputStream, @Var("filename") String filename);
 
 
-
-
 }

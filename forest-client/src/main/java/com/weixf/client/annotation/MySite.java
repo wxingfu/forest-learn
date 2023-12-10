@@ -3,7 +3,11 @@ package com.weixf.client.annotation;
 import com.dtflys.forest.annotation.Address;
 import com.dtflys.forest.annotation.Headers;
 
-import java.lang.annotation.*;
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
 /**
  * Forest 可以同时组合多个注解

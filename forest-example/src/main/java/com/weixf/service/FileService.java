@@ -14,17 +14,17 @@ public class FileService {
 
 
     public Map<String, String> uploadReal(String fileName, MultipartFile file) {
-        //处理后缀
+        // 处理后缀
         HashMap<String, String> result = new HashMap<>();
-        //获取物理路径
+        // 获取物理路径
         File destFile = new File(fileName);
         System.out.println("uploadReal,destFile=" + destFile.getAbsolutePath());
         System.out.println("uploadReal,destFile.getParentFile=" + destFile.getParentFile().getAbsolutePath());
-        //目录不存在
+        // 目录不存在
         if (!destFile.getParentFile().exists()) {
             destFile.getParentFile().mkdirs();
         }
-        //目录存在是文件
+        // 目录存在是文件
         if (destFile.getParentFile().isFile()) {
             result.put("flag", "fail");
             result.put("message", "父级路径是文件而不是目录");

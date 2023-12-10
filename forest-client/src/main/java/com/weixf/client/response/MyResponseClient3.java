@@ -69,6 +69,7 @@ public interface MyResponseClient3 {
     /*
      * 因为ForestResponse为带泛型的类型，其泛型参数可以是任何其他类型，所以可以根据它的泛型参数中的类型不同，而将响应内容反序列化成不同的对象。
      */
+
     /**
      * ForestResponse 可以作为请求方法的返回类型
      * ForestResponse 为带泛型的类，其泛型参数中填的类作为其响应反序列化的目标类型
@@ -87,7 +88,6 @@ public interface MyResponseClient3 {
      *     User user = response.getResult();
      * }
      */
-
 
 
 }

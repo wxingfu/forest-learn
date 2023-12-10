@@ -2,8 +2,6 @@ package com.weixf.client.reqbody;
 
 import com.dtflys.forest.annotation.Body;
 import com.dtflys.forest.annotation.Post;
-import com.dtflys.forest.http.ForestRequest;
-import com.dtflys.forest.http.ForestResponse;
 import com.weixf.entity.UserInfo;
 
 /*
@@ -17,7 +15,7 @@ public interface MyFormClient {
      * 默认body格式为 application/x-www-form-urlencoded，即以表单形式序列化数据
      */
     @Post("http://localhost:8080/user")
-    String sendPost(@Body("username") String username,  @Body("password") String password);
+    String sendPost(@Body("username") String username, @Body("password") String password);
 
 
 
@@ -25,6 +23,7 @@ public interface MyFormClient {
     @Body 注解的例子用的是普通的表单格式，也就是contentType属性为application/x-www-form-urlencoded的格式，即contentType不做配置时的默认值。
     表单格式的请求体以字符串 key1=value1&key2=value2&...&key{n}=value{n} 的形式进行传输数据，其中value都是已经过 URL Encode 编码过的字符串。
      */
+
     /**
      * contentType属性设置为 application/x-www-form-urlencoded 即为表单格式，
      * 当然不设置的时候默认值也为 application/x-www-form-urlencoded， 也同样是表单格式。
@@ -51,6 +50,7 @@ public interface MyFormClient {
     会将注解所修饰参数值对象视为一整个表单，
     其对象中的所有属性将按 属性名1=属性值1&属性名2=属性值2&...&属性名{n}=属性值{n} 的形式通过请求体进行传输数据。
      */
+
     /**
      * contentType 属性不设置默认为 application/x-www-form-urlencoded
      * 要以对象作为表达传输项时，其 @Body 注解的 value 名称不能设置

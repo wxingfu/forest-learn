@@ -16,7 +16,7 @@ public class SimpleInterceptor2 implements Interceptor<String> {
     public void onInvokeMethod(ForestRequest req, ForestMethod method, Object[] args) {
         String methodName = method.getMethodName();
         addAttribute(req, "methodName", methodName); // 添加Attribute
-        addAttribute(req, "num", (Integer) args[0]); // 添加Attribute
+        addAttribute(req, "num", args[0]); // 添加Attribute
     }
 
     @Override

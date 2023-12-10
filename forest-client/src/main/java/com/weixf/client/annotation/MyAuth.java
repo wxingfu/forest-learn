@@ -3,7 +3,11 @@ package com.weixf.client.annotation;
 import com.dtflys.forest.annotation.MethodLifeCycle;
 import com.dtflys.forest.annotation.RequestAttributes;
 
-import java.lang.annotation.*;
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
 /**
  * 用Forest自定义注解实现一个自定义的签名加密注解

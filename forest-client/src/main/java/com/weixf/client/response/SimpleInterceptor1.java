@@ -12,6 +12,7 @@ import com.dtflys.forest.interceptor.Interceptor;
  */
 public class SimpleInterceptor1 implements Interceptor<String> {
     // ... ...
+
     /**
      * 该方法在请求发送之后被调用
      */

@@ -15,6 +15,6 @@ public class SimpleInterceptor3 implements Interceptor<String> {
     public void onInvokeMethod(ForestRequest req, ForestMethod method, Object[] args) {
         String methodName = method.getMethodName();
         req.addAttachment("methodName", methodName); // 添加Attachment
-        req.addAttachment("num", (Integer) args[0]); // 添加Attachment
+        req.addAttachment("num", args[0]); // 添加Attachment
     }
 }

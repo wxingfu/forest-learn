@@ -2,7 +2,11 @@ package com.weixf.client.annotation;
 
 import com.dtflys.forest.annotation.Headers;
 
-import java.lang.annotation.*;
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
 /**
  * 用Forest组合注解实现一个自定义的请求头注解

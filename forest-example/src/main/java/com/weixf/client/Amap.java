@@ -1,6 +1,10 @@
 package com.weixf.client;
 
-import com.dtflys.forest.annotation.*;
+import com.dtflys.forest.annotation.BaseRequest;
+import com.dtflys.forest.annotation.DataVariable;
+import com.dtflys.forest.annotation.Get;
+import com.dtflys.forest.annotation.Query;
+import com.dtflys.forest.annotation.Var;
 import com.weixf.model.Coordinate;
 import com.weixf.model.Location;
 import com.weixf.model.Result;

@@ -1,4 +1,5 @@
-URL参数，也称为 URL 查询字符串，即跟在 URL 地址中`?`后面的那串字符串，可以用`=`表示一对键值对，多个键值对用`&`隔开，其可以作为 HTTP 请求的参数
+URL参数，也称为 URL 查询字符串，即跟在 URL 地址中`?`后面的那串字符串，可以用`=`表示一对键值对，多个键值对用`&`隔开，其可以作为
+HTTP 请求的参数
 
 ## 字符串模板传参
 
@@ -39,8 +40,6 @@ String send2(@Var("a") String a, @Var("b") String b);
 String send3(@Var("parameters") String parameters);
 ```
 
-
-
 调用`{参数序号}`字符串模板的方法
 
 ```java
@@ -50,8 +49,6 @@ myClient.send1("A", "B&c=C");
 // 产生的URL为
 // http://localhost:8080/abc?a=A&b=B%26c%3DC&id=0
 ```
-
-
 
 调用`{变量名}`字符串模板的方法
 
@@ -63,8 +60,6 @@ myClient.send2("A", "B&c=C");
 // http://localhost:8080/abc?a=A&b=B%26c%3DC&id=0
 ```
 
-
-
 调用`${变量名}`字符串模板的方法
 
 ```java
@@ -74,8 +69,6 @@ myClient.send3("a=A&b=B&c=C");
 // 产生的URL为
 // http://localhost:8080/abc?a=A&b=B&c=C
 ```
-
-
 
 ## @Query 注解
 
@@ -137,8 +130,6 @@ String send2(@Query UserInfo user);
 String send1(@Query("id") List idList);
 ```
 
-
-
 若调用 **send1(Arrays.asList(1, 2, 3, 4))**
 
 则产生的最终URL为
@@ -146,8 +137,6 @@ String send1(@Query("id") List idList);
 ```text
 http://localhost:8080/abc?id=1&id=2&id=3&id=4
 ```
-
-
 
 **数组类型参数**
 
@@ -159,8 +148,6 @@ http://localhost:8080/abc?id=1&id=2&id=3&id=4
 String send2(@Query("id") int[] idList);
 ```
 
-
-
 若调用 **send2(new int[] {1, 2, 3, 4})**
 
 则产生的最终URL为
@@ -168,8 +155,6 @@ String send2(@Query("id") int[] idList);
 ```text
 http://localhost:8080/abc?id=1&id=2&id=3&id=4
 ```
-
-
 
 ## 带 [] 的数组参数
 
@@ -183,8 +168,6 @@ http://localhost:8080/abc?id=1&id=2&id=3&id=4
 String send(@Query("id[]") int[] idList);
 ```
 
-
-
 若调用 **send2(new int[] {1, 2, 3, 4})**
 
 则产生的最终URL为
@@ -192,8 +175,6 @@ String send(@Query("id[]") int[] idList);
 ```text
 http://localhost:8080/abc?id[]=1&id[]=2&id[]=3&id[]=4
 ```
-
-
 
 ## 带下标的数组参数
 
@@ -207,8 +188,6 @@ http://localhost:8080/abc?id[]=1&id[]=2&id[]=3&id[]=4
 String send(@Query("id[${_index}]") int[] idList);
 ```
 
-
-
 若调用 **send2(new int[] {1, 2, 3, 4})**
 
 则产生的最终URL为
@@ -216,8 +195,6 @@ String send(@Query("id[${_index}]") int[] idList);
 ```text
 http://localhost:8080/abc?id[0]=1&id[1]=2&id[2]=3&id[3]=4
 ```
-
-
 
 ## JSON参数
 
@@ -229,8 +206,6 @@ http://localhost:8080/abc?id[0]=1&id[1]=2&id[2]=3&id[3]=4
 @Get("http://localhost:8080/abc")
 String send(@JSONQuery("id") List idList);
 ```
-
-
 
 若调用 **send(Arrays.asList(1, 2, 3, 4))**
 

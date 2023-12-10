@@ -15,6 +15,7 @@ public interface MyXMLClient {
      * @XMLBody注解修饰对象
      * 发送XML也非常简单，只要用@XMLBody注解修饰相关参数就可以了，该注解自1.5.0-RC1版本起可以使用。
      */
+
     /**
      * 被@JSONBody注解修饰的参数会根据其类型被自定解析为XML字符串
      * 其修饰的参数类型必须支持JAXB，可以使用JAXB的注解进行修饰
@@ -35,6 +36,7 @@ public interface MyXMLClient {
      * @XMLBody注解修饰字符串
      * @XMLBody支持的另一种形式就是直接传入一个XML字符串
      */
+
     /**
      * @ XMLBody注解可以修饰一个字符串参数，作为要传输的XML字符串
      */
@@ -63,8 +65,6 @@ public interface MyXMLClient {
     // 并发送到服务端
     // @ProtobufBody 在默认请情况下会将 Content-Type 设为
     // application/x-protobuf
-
-
 
 
 }

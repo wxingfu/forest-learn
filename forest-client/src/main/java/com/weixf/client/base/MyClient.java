@@ -12,12 +12,13 @@ import com.dtflys.forest.annotation.Query;
 @BaseRequest(baseURL = "http://localhost:8080", headers = {"Accept:text/plain"}, sslProtocol = "TLS")
 public interface MyClient {
 
-    @Get("/hello/user") // http://localhost:8080/hello/user
+    @Get("/hello/user")
+        // http://localhost:8080/hello/user
     String send1(@Query("username") String username);
 
     @Get("http://www.xxx.com/hello/user")
     String send2(@Query("username") String username);
-  
+
     @Get(url = "/hello/user", headers = {"Accept:application/json"})
     String send3(@Query("username") String username);
 }
